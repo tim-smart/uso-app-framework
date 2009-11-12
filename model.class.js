@@ -1,4 +1,3 @@
-
 /**
  * Model prototype
  * uso-app-framework

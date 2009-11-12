@@ -1,4 +1,3 @@
-
 /**
  * View prototype
  * uso-app-framework
@@ -10,4 +9,3 @@
 var View = new Class({
 	contructor: View
 });
-

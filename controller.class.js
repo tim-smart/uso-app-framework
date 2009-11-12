@@ -1,4 +1,3 @@
-
 /**
  * Controller prototype
  * uso-app-framework

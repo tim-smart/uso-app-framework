@@ -1,4 +1,3 @@
-
 /**
  * Misc Classes and functions for the framework
  * uso-app-framework
@@ -26,4 +25,3 @@ function Class( params ) {
 	params = null;
 	return newClass;
 }
-

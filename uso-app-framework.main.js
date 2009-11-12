@@ -1,4 +1,3 @@
-
 /**
  * uso-app-framework
  *
@@ -10,4 +9,3 @@
 #include 'controller.class.js'
 #include 'model.class.js'
 #include 'view.class.js'
-
