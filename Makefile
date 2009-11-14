@@ -1,5 +1,5 @@
 CPP=cpp
-EX=ex
+EX=vim
 EXEC=uso-app-framework.user.js
 SRCS=uso-app-framework.main.js
 DEPEND=makedepend
