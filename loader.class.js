@@ -11,7 +11,8 @@ var Loader = new Class({
 
 		if ( 'string' === typeof name ) {
 			try {
-				var instance = eval( 'new Model' + name.replace( /^./, function( $0 ) { return $0.toUpperCase() } ) + '();' );
+				var instance = eval('Model' + name.replace( /^./, function( $0 ) { return $0.toUpperCase() } ) + ';' );
+				instance = new instance();
 			} catch ( error ) {
 				throw new Error( 'Loader: Could not load model ' + name );
 			}
