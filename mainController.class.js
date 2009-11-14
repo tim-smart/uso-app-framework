@@ -8,7 +8,7 @@ var MainController = new Class({
 		if ( 'string' === typeof name ) {
 			name = name.replace( /^./, function( $0 ) { return $0.toUpperCase() } );
 			try {
-				var instance = Function('return new Controller' + name + '();')();
+				var instance = eval('new Controller' + name + '();')();
 			} catch ( e ) {
 				throw new Error('MainController.prototype.dispatch: prototype `Controller' + name + '` not found');
 			}
