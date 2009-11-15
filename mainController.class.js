@@ -6,7 +6,7 @@
 var MainController = new Class({
 	dispatch: function( name, args ) {
 		if ( 'string' === typeof name ) {
-			name = name.replace( /^./, function( $0 ) { return $0.toUpperCase() } );
+			name = name.replace( /^./, function( $0 ) { return $0.toUpperCase(); } );
 			try {
 				var instance = eval('Controller' + name + ';');
 				instance = new instance();

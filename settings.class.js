@@ -36,7 +36,7 @@ var Settings = new Class({
 			section = this.defaultSection;
 
 		this._settings[ section ][ setting.name ] = {
-			dataType: 'string' === typeof setting.dataType ? setting.dataType : 'string',
+			type: 'string' === typeof setting.dataType ? setting.dataType : 'text',
 			title: setting.title || setting.name,
 			help: setting.help || false,
 			defaultValue: 'undefined' !== typeof settings.defaultValue ? setting.defaultValue : null
