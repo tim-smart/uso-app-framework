@@ -8,32 +8,23 @@
 var ModelStorage = new Class({
 	Extends: Model,
 	constructor: ModelStorage,
-	construct: function() {
-		this._dataTypes = JSON.parse( GM_getValue( 'ModelStorageGM/dataTypes', '{}' ) );
-	},
-	_dataTypes: {},
 	get: function( name, defaultValue ) {
-		switch ( this._dataTypes[ name ] ) {
-			case 'object':
-				var ret = JSON.parse( GM_getValue( name, 'null' ) );
-				if ( null === ret )
-					return defaultValue;
-				return ret;
+		try {
+			var ret = JSON.parse( GM_getValue( name, 'null' ) );
+		} catch ( error ) {
+			throw new Error( 'ModelStorage.prototype.get: Could not parse value. ' + error.toString() );
 		}
-		return GM_getValue( name, defaultValue );
+
+		if ( null === ret )
+			ret = defaultValue;
+		return ret;
 	},
 	set: function ( name, value ) {
-		this._dataTypes[ name ] = this._getDataType( value );
-		GM_setValue( 'ModelStorageGM/dataTypes', JSON.stringify( value ) );
-		switch ( this._dataTypes[ name ] ) {
-			case 'object':
-				value = JSON.stringify( value );
-				return GM_setValue( name, value );
+		try {
+			return GM_setValue( name, JSON.stringify( value ) );
+		} catch ( error ) {
+			throw new Error( 'ModelStorage.prototype.set: Could not set value. ' + error.toString() );
 		}
-		return GM_setValue( name, value );
-	},
-	_getDataType: function( data ) {
-		return typeof data;
 	}
 });
 #endif
