@@ -7,5 +7,6 @@
  */
 
 var View = new Class({
-	contructor: View
+	contructor: View,
+	output: null
 });
