@@ -6,17 +6,19 @@
 // @version        0.1 Alpha
 // ==/UserScript==
 
-#include "library.js"
+#include "misc.js"
 
 #include "controller.class.js"
 #include "model.class.js"
 #include "view.class.js"
+
+// The global variables
 #include "mainController.class.js"
 #include "loader.class.js"
-#include "config.class.js"
-
 var controller = new MainController(),
 load = new Loader(),
 model = {};
 
+// Config prototype
+#include "config.class.js"
 var config = new Config();
