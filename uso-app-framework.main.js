@@ -19,10 +19,13 @@ var controller = new MainController(),
 load = new Loader(),
 model = {};
 
-// Config prototype
-#include "config.class.js"
-var config = new Config();
+// Storage prototype
+#include "storage.class.js"
+var storage = new Storage();
 
 // Settings prototype
 #include "settings.class.js"
 var settings = $s = new Settings();
+
+// Misc Prototypes
+#include "domHelper.class.js"

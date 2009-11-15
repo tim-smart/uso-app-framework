@@ -23,10 +23,10 @@ var Settings = new Class({
 		return this._data[ section ][ name ] = value;
 	},
 	load: function() {
-		return this._data = config.get( 'settings', ({}) );
+		return this._data = storage.get( 'settings', ({}) );
 	},
 	save: function() {
-		return config.set( 'settings', this._data );
+		return storage.set( 'settings', this._data );
 	},
 	get settings() {
 		return this._settings;

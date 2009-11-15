@@ -1,13 +1,10 @@
-#ifndef _MODEL_STORAGE
-#define _MODEL_STORAGE
 /**
  * Storage prototype - Interface for setting and getting permanent data
  * uso-app-framework
  */
 
-var ModelStorage = new Class({
-	Extends: Model,
-	constructor: ModelStorage,
+var Storage = new Class({
+	constructor: Storage,
 	get: function( name, defaultValue ) {
 		try {
 			var ret = JSON.parse( GM_getValue( name, 'null' ) );
@@ -27,4 +24,3 @@ var ModelStorage = new Class({
 		}
 	}
 });
-#endif
