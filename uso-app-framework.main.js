@@ -22,3 +22,7 @@ model = {};
 // Config prototype
 #include "config.class.js"
 var config = new Config();
+
+// Settings prototype
+#include "settings.class.js"
+var settings = $s = new Settings();
